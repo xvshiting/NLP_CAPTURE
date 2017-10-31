@@ -1,0 +1,12 @@
+{
+"id":"345",
+"interval_rule":{
+	"1":[2,3],
+	"2":[4,5],
+	"3":[5]
+},
+"Description" : " ",
+"re":{
+	"interval":["abcd(.*)jj"]
+}
+}
