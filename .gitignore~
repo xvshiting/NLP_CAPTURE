@@ -1,5 +1,0 @@
-.DS_Store
-/src/__pycache__
-tags
-env.vim
-!.gitignore

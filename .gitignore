@@ -3,4 +3,6 @@
 tags
 env.vim
 *.pyc
+..gitignore.un~
+.gitignore.un~
 !.gitignore
