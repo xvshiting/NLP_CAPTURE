@@ -6,20 +6,7 @@ import sys
 import tools
 import re
 from logger import logger
-def add(rule,value):
-	sum=0
-	for v in value:
-		sum=int(v)+sum
-	return interval(rule,[sum])
-def interval(rule,value):
-	logger().info("In interval")
-	for k,v in rule.items():
-			# print (value)
-		if len(v)==1:
-			if int(value[0])>v[0]:
-				return k
-		if v[0]<=int(value[0]) and int(value[0])<v[1]:
-			return k
+import function
 class capture(object):
 	_instance=None
 	def __init__(self):
@@ -39,7 +26,7 @@ class capture(object):
 						re_dict[re_file.split(".")[0]]=json.load(f)
 			capture._instance.re_dict=re_dict
 			capture._instance.interval=0
-			capture._instance.function_dict={'interval':interval,'add':add}
+			capture._instance.function_dict=function.function_dict
 		return capture._instance
 	def parse_re(self,contents="a123"):
 		res=[]
@@ -71,5 +58,5 @@ class capture(object):
 		return g
 # print(capture().parse_re("一个男孩，一个女孩"))
 # print(capture().parse_re("一个男孩，一个女孩"))
-# print(capture().parse_re("我有3个孩子，我有4个孩子"))
+# print(capture().parse_re("我有3个孩子"))
 # print(capture().parse_re("我有3个孩子"))
