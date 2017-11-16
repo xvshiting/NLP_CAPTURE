@@ -21,7 +21,7 @@ class capture(object):
 			re_dict=dict()
 			re_file_list=os.listdir(root_dir)
 			for re_file in re_file_list:
-				if re_file.endswith(".json"):
+				if re_file.endswith(".json")and not re_file.startswith("."):
 					with open(root_dir+os.sep+re_file,'r') as f:
 					# contents=f.readlines()
 						re_dict[re_file.split(".")[0]]=json.load(f,object_pairs_hook=OrderedDict)
@@ -61,4 +61,4 @@ class capture(object):
 # print(capture().parse_re("一个男孩，一个女孩"))
 # print(capture().parse_re("一个男孩，一个女孩"))
 # print(capture().parse_re("我有3个孩子"))
-print(capture().parse_re("我有3个孩子,有4个孩子"))
+# print(capture().parse_re("我有3个孩子,有4个孩子"))

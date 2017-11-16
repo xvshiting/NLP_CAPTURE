@@ -9,6 +9,7 @@ class MainHandler(tornado.web.RequestHandler):
     def post(self):
         param = self.request.body.decode('utf-8')
         prarm = json.loads(param)
+        # print(prarm)
         res=mp.process(param)
         self.write(json.dumps(res))
 
