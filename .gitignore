@@ -5,4 +5,5 @@ env.vim
 *.pyc
 ..gitignore.un~
 .gitignore.un~
+test/
 !.gitignore
