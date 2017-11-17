@@ -7,3 +7,4 @@ env.vim
 .gitignore.un~
 test/
 !.gitignore
+config/
