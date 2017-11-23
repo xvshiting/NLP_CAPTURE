@@ -1,5 +1,5 @@
-
-from logger import logger
+# -*- coding: utf-8 -*-
+# from logger import logger
 function_dict=dict()
 
 
@@ -13,7 +13,7 @@ def record_function(func):
 def add(rule,value):
 	if type(value)!=list :
 		value=[value]
-	print("In add")
+	# print("In add")
 	sum=0
 	for v in value:
 		sum=int(v)+sum
@@ -22,15 +22,12 @@ def add(rule,value):
 
 @record_function
 def interval(rule,value):
-	logger().info("In interval")
+	# logger().info("In interval")
 	for k,v in rule.items():
 			# print (value)
 		if len(v)==1:
 			if int(value[0])>v[0]:
-				print("Should return K:   "+str(k))
+				# print("Should return K:   "+str(k))
 				return k
 		elif v[0]<=int(value[0]) and int(value[0])<v[1]:
 			return k
-
-
-
